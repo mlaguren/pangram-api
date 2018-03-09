@@ -3,8 +3,8 @@ pipeline {
 
     stages {
         stage('Build') {
-        properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('H/15 * * * *')])])
             steps {
+                properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('H/15 * * * *')])])
                 echo 'Building..'
                 echo 'docker build -t pangram-api .'
             }
