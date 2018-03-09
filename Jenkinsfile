@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                echo 'docker build -t pangram-api .'
             }
         }
         stage('Test') {
