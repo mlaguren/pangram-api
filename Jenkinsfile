@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                properties([pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('H/15 * * * *')])])
                 echo 'Building..'
-                echo 'docker build -t pangram-api .'
+                echo 'docker run ruby'
             }
         }
         stage('Test') {
