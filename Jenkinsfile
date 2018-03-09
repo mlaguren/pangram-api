@@ -4,11 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'whoami'
-                echo 'Building..'
-                sh 'docker run ruby'
-                sh 'docker ps'
-                
+                sh 'docker build -t pangram .'
             }
         }
         stage('Test') {
