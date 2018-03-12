@@ -1,10 +1,10 @@
 pipeline {
-    agent { label 'docker' }
+    agent { label 'ruby' }
 
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -t pangram .'
+                sh 'bundle install'
             }
         }
         stage('Test') {
