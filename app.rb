@@ -20,9 +20,4 @@ post "/pangram" do
       { :pangram => 'false' }.to_json
     end
   end
-  
-  get "/pangram" do
-    
-  end
-
 end
